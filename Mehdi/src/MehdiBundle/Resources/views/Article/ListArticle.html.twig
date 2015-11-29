@@ -1,0 +1,24 @@
+{# src/MehdiBundle/Resources/views/Article/ListeArticles.html.twig #}
+
+{% extends "MehdiBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block mehdi_body %}
+
+  <h2>Liste des annonces:</h2>
+
+  <p>
+    {% for article in listArticles %}
+      <li>
+        <a href="{{ path('mehdi_view', {'id': article.id}) }}">
+          {{ article.title }}, le {{ article.date|date('d-m-Y') }}  par {{article.author}}
+        </a>
+      </li>
+    {% endfor %}   
+
+ </p>   
+
+{% endblock %}

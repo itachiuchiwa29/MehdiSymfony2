@@ -1,0 +1,15 @@
+{# src/MehdiBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Mehdi \o/ /o\ \o/ /o\ \o/ {% endblock %}</title>
+  </head>
+  <body>
+
+    {% block body %}
+    {% endblock %}
+
+  </body>
+</html>

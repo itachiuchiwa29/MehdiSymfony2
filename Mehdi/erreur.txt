@@ -1,0 +1,1 @@
+Supprimer ne fonction pas car on ne passe jamais dans la boucle POST du coutroleur Delete. 

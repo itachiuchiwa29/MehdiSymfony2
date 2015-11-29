@@ -1,0 +1,16 @@
+# src/MehdiBundle/Resources/config/services.yml
+
+services:
+    mehdi.antispam:
+        class: MehdiBundle\Antispam\Antispam
+        arguments: [@mailer, %locale%, 50]
+
+    mehdi.doctrine.notification:
+        class: MehdiBundle\DoctrineListener\ApplicationNotification
+        arguments: [@mailer]
+        tags:
+            - { name: doctrine.event_listener, event: postPersist }
+
+#@mailer appelle le service mailer et l'instancie pour nous
+#%locale% signifie qu'il va chercher la langue du server par défault
+#50 est le nb de mot ou caractère (je sais plus) minimum pour que  le message ne soit pas considéré comme un spam

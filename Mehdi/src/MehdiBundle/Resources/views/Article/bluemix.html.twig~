@@ -1,0 +1,25 @@
+{# src/MehdiBundle/Resources/views/Article/micro_geolocalisation.html.twig #}
+
+{% extends "MehdiBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block mehdi_body %}
+
+  <h2>A propos de Nous</h2>
+
+  <p>
+   
+      Bluemix est une plate-forme cloud reposant sur des piles logicielles open source et provenant des communautés et d’IBM. Ce PaaS (plateforme as a service) permet de gérer et de déployer des services mobile, big data, web, objets connectés. Il permet aussi de déployer des applications Java, de faire du monitoring d’applications.
+
+La partie Mobile s’appuie sur des fonctions de sécurité, de données, de qualité de projet.
+
+Pour le web et les applications, bluemix se veut très large : concevoir la logique business et les règles business des applications, cache de données, moteur de messaging, outil visuel de développement rapide, création et gestion de workflow, etc.
+
+Sur les données : base NoSQL Cloudant, SQL Database, MySQL, ElephantSQL, MongoLab. 	
+
+ </p>   
+
+{% endblock %}

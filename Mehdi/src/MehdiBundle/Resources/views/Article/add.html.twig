@@ -1,0 +1,26 @@
+{# src/MehdiBundle/Resources/views/Article/add.html.twig #}
+
+{% extends "MehdiBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block mehdi_body %}
+
+  <h2>Ajouter une annonce</h2>
+  {#Ajout du formulaire#}
+  {{ include("MehdiBundle:Article:form.html.twig") }}
+
+  <p>
+    Lors de l'ajout d'un article, veuiller respecter les règles du site 
+  </p>
+
+  <p>
+    {#<a href="{{ path('mehdi_view', {'id': article.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'annonce
+    </a>#}
+  </p>
+
+{% endblock %}

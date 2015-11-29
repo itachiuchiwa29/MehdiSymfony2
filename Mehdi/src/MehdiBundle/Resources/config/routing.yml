@@ -1,0 +1,60 @@
+# Mehdi/src/MehdiBundle/Resources/config/routing.yml
+
+
+mehdi_home:
+    path:      /
+    defaults:  { _controller: MehdiBundle:Article:index}
+
+
+
+mehdi_view:
+    path:      /Article/{id}
+    defaults:  { _controller: MehdiBundle:Article:view }
+    requirements:
+        id: \d+
+
+mehdi_add:
+    path:      /add
+    defaults:  { _controller: MehdiBundle:Article:add }
+
+
+mehdi_edit:
+    path:      /edit/{id}
+    defaults:  { _controller: MehdiBundle:Article:edit }
+    requirements:
+        id: \d+
+
+
+mehdi_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: MehdiBundle:Article:delete }
+    requirements:
+        id: \d+
+
+mehdi_ListArticle:
+    path:      /Liste_des_Articles
+    defaults:  { _controller: MehdiBundle:Article:ListArticles }
+
+mehdi_About:
+    path:      /A_propos_de_nous
+    defaults:  { _controller: MehdiBundle:Article:about_us}
+
+mehdi_micro_geolocalisation:
+    path:      /Micro_geolocalisation
+    defaults:  { _controller: MehdiBundle:Article:micro_geolocalisation}
+
+mehdi_beacon:
+    path:      /BlueMix
+    defaults:  { _controller: MehdiBundle:Article:bluemix}
+
+mehdi_bluemix:
+    path:      /Beacon
+    defaults:  { _controller: MehdiBundle:Article:beacon}
+
+mehdi_equipe:
+    path:      /L_equipe
+    defaults:  { _controller: MehdiBundle:Article:equipe}
+
+mehdi_contact:
+    path:      /contact
+    defaults:  { _controller: MehdiBundle:Article:contact }
